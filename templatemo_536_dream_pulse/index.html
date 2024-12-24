@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dream Pulse TemplateMo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/templatemo-dream-pulse.css">
+  <link rel="stylesheet" href="css/video-container.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    #tmSidebar {
+      z-index: 2;
+      transition: transform 0.3s ease-in-out;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+    }
+    .tm-intro {
+      z-index: 3;
+      position: relative;
+    }
+    .navbar-toggler {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+    .navbar-toggler i {
+      font-size: 24px;
+      color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar-toggler.open i {
+      transform: rotate(45deg);
+    }
+    .tm-sidebar.open {
+      transform: translateX(0);
+    }
+    .tm-sidebar {
+      transform: translateX(-100%);
+    }
+    .tm-section-title {
+      font-size: 2.5em;
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+      animation: fadeInUp 2s ease-in-out;
+    }
+    .tm-section-icon {
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+      animation: bounceIn 2s ease-in-out;
+    }
+    .tm-main-nav a {
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+      transition: color 0.3s ease-in-out;
+    }
+    .tm-main-nav a:hover {
+      color: #ff6347;
+      text-shadow: 2px 2px 4px rgba(255, 99, 71, 0.5), 0 0 10px rgba(255, 99, 71, 0.2);
+    }
+    .tm-social-link i {
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+      transition: color 0.3s ease-in-out;
+    }
+    .tm-social-link i:hover {
+      color: #ff6347;
+      text-shadow: 2px 2px 4px rgba(255, 99, 71, 0.5), 0 0 10px rgba(255, 99, 71, 0.2);
+    }
+    .tm-footer-link {
+      color: #ff6347;
+      text-shadow: 2px 2px 4px rgba(255, 99, 71, 0.5), 0 0 10px rgba(255, 99, 71, 0.2);
+      transition: color 0.3s ease-in-out;
+    }
+    .tm-footer-link:hover {
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+    }
+    .tm-gallery-item {
+      transition: transform 0.3s ease-in-out;
+    }
+    .tm-gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .tm-gallery-item figcaption {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+    }
+    .tm-gallery-item figcaption h2 {
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+    }
+    .tm-gallery-item figcaption p {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .tm-gallery-item figcaption a {
+      color: #ff6347;
+      text-shadow: 2px 2px 4px rgba(255, 99, 71, 0.5), 0 0 10px rgba(255, 99, 71, 0.2);
+      transition: color 0.3s ease-in-out;
+    }
+    .tm-gallery-item figcaption a:hover {
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+    }
+    .video-container iframe {
+      border: 5px solid #ff6347;
+      box-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
+    }
+    .tm-color-gray {
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+    }
+    .tm-client-img {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .tm-client-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    .glow {
+      text-shadow: 0 0 5px rgba(0, 123, 255, 0.4), 0 0 10px rgba(0, 123, 255, 0.3), 0 0 15px rgba(0, 123, 255, 0.2);
+    }
+    .neon-text {
+      color: #007bff;
+      text-shadow: 0 0 5px rgba(0, 123, 255, 0.6), 0 0 10px rgba(0, 123, 255, 0.4), 0 0 15px rgba(0, 123, 255, 0.2);
+    }
+    .parallax-window {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .smooth-text {
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header, .footer {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header h1, .footer p {
+      margin: 0;
+    }
+    .content {
+      padding: 20px 0;
+    }
+    .content h2 {
+      color: #007bff;
+    }
+    .content p {
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #005bb5;
+    }
+    .btn-primary {
+      background-color: #ff6347;
+    }
+    .btn-primary:hover {
+      background-color: #ff4500;
+    }
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .card-header, .card-footer {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: 18px;
+    }
+    .card-text {
+      font-size: 14px;
+      color: #777;
+    }
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ddd;
+    }
+    .card-img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .card:hover .card-img-overlay {
+      opacity: 1;
+    }
+    .interactive-element {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .interactive-element:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    .tech-highlight {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    .tech-highlight h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .tech-highlight p {
+      font-size: 14px;
+      color: #ccc;
+    }
+    /* Snow Animation */
+    .snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+    .snowflake {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(100vh);
+      }
+    }
+    /* Additional Graphical Enhancements */
+    .glowing-border {
+      border: 2px solid;
+      border-image-slice: 1;
+      border-width: 2px;
+      border-image-source: linear-gradient(to right, #007bff, #ff6347);
+      animation: border-glow 2s infinite;
+    }
+    @keyframes border-glow {
+      0% {
+        border-image-source: linear-gradient(to right, #007bff, #ff6347);
+      }
+      50% {
+        border-image-source: linear-gradient(to right, #ff6347, #007bff);
+      }
+      100% {
+        border-image-source: linear-gradient(to right, #007bff, #ff6347);
+      }
+    }
+    .hover-effect {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-effect:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .floating-element {
+      animation: float 3s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    /* Enhanced 6G Text */
+    .enhanced-6g-text {
+      color: #007bff;
+      text-shadow: 0 0 10px rgba(0, 123, 255, 0.5), 0 0 20px rgba(0, 123, 255, 0.5), 0 0 30px rgba(0, 123, 255, 0.5), 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff;
+      transition: text-shadow 0.3s ease;
+    }
+    .enhanced-6g-text:hover {
+      text-shadow: 0 0 15px rgba(0, 123, 255, 0.6), 0 0 25px rgba(0, 123, 255, 0.6), 0 0 35px rgba(0, 123, 255, 0.6), 0 0 45px #007bff, 0 0 55px #007bff, 0 0 65px #007bff, 0 0 75px #007bff;
+    }
+    /* Burger Menu Hover Effect */
+    .tm-main-nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s;
+    }
+    .tm-main-nav a:hover::after {
+      width: 100%;
+      background: linear-gradient(to right, white, #007bff);
+      background-size: 200% 200%;
+      animation: gradient-animation 2s infinite;
+    }
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div id="app">
+    <sidebar-component></sidebar-component>
+    <transition name="fade" mode="out-in">
+      <main-component></main-component>
+    </transition>
+  </div>
+
+  <div class="snow">
+    <div class="snowflake" style="left: 10%; animation-duration: 5s; animation-delay: 0s;"></div>
+    <div class="snowflake" style="left: 20%; animation-duration: 6s; animation-delay: 1s;"></div>
+    <div class="snowflake" style="left: 30%; animation-duration: 7s; animation-delay: 2s;"></div>
+    <div class="snowflake" style="left: 40%; animation-duration: 8s; animation-delay: 3s;"></div>
+    <div class="snowflake" style="left: 50%; animation-duration: 9s; animation-delay: 4s;"></div>
+    <div class="snowflake" style="left: 60%; animation-duration: 10s; animation-delay: 5s;"></div>
+    <div class="snowflake" style="left: 70%; animation-duration: 11s; animation-delay: 6s;"></div>
+    <div class="snowflake" style="left: 80%; animation-duration: 12s; animation-delay: 7s;"></div>
+    <div class="snowflake" style="left: 90%; animation-duration: 13s; animation-delay: 8s;"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://bot.jaicp.com/chatwidget/NmHmcklu:5ddd281c1f9483c91ae8005519dbe5df0fe011c6/justwidget.js?force=true" async></script>
+  <script>
+    Vue.component('sidebar-component', {
+      template: `
+        <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar animate__animated animate__fadeInLeft" :class="{ open: isOpen }">
+          <button class="navbar-toggler" type="button" aria-label="Toggle navigation" @click="toggleMenu" :class="{ open: isOpen }">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="tm-sidebar-sticky">
+            <div class="tm-brand-box">
+              <div class="tm-double-border-1">
+                <div class="tm-double-border-2">
+                  <a href="https://www.6gworld.com" target="_blank">
+                    <h1 class="tm-brand text-uppercase animate__animated animate__bounceIn pulse neon-text smooth-text enhaced-6g-text">6G</h1>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav">
+              <li class="nav-item">
+                <a href="#intro" class="nav-link active">
+                  <span class="d-inline-block mr-3">Главное</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">
+                  <span class="d-inline-block mr-3">Информация о 6G</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#work" class="nav-link">
+                  <span class="d-inline-block mr-3">Технологии</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#vid" class="nav-link">
+                  <span class="d-inline-block mr-3">Видео</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#clients" class="nav-link">
+                  <span class="d-inline-block mr-3">О Нас</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav flex-row tm-social-links">
+              <li class="nav-item">
+                <a href="https://facebook.com" class="nav-link tm-social-link">
+                  <i class="fab fa-vk"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://twitter.com" class="nav-link tm-social-link">
+                  <i class="fab fa-google"></i>
+                </a>
+              </li>
+            </ul>
+            <footer class="text-center text-white small">
+              <p class="mb--0 mb-2">Технологии будущего</p>
+              <p class="mb-0">Дизайн:
+                <a rel="nofollow" href="https://vk.com/privkrchcto" class="tm-footer-link">Тарасов М.</a>
+              </p>
+            </footer>
+          </div>
+        </nav>
+      `,
+      data() {
+        return {
+          isOpen: false
+        };
+      },
+      methods: {
+        toggleMenu() {
+          this.isOpen = !this.isOpen;
+        }
+      },
+      mounted() {
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {
+              "value": 80,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 5,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 6,
+              "direction": "none",
+              "random": false,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+      }
+    });
+
+    Vue.component('main-component', {
+      template: `
+        <main role="main" class="ml-sm-auto col-12">
+          <transition name="fade" mode="out-in">
+            <intro-section></intro-section>
+          </transition>
+          <transition name="fade" mode="out-in">
+            <about-section></about-section>
+          </transition>
+          <transition name="fade" mode="out-in">
+            <technologies-section></technologies-section>
+          </transition>
+          <transition name="fade" mode="out-in">
+            <video-section></video-section>
+          </transition>
+          <transition name="fade" mode="out-in">
+            <about-us-section></about-us-section>
+          </transition>
+        </main>
+      `
+    });
+
+    Vue.component('intro-section', {
+      template: `
+        <div class="parallax-window" data-parallax="scroll" data-image-src="img/orig.jpg">
+          <div class="tm-section-wrap">
+            <section id="intro" class="tm-section animate__animated animate__fadeInUp">
+              <div class="tm-bg-white-transparent tm-intro">
+                <h2 class="tm-section-title mb-5 text-uppercase tm-color-primary animate__animated animate__bounceIn neon-text smooth-text">Технология 6G, что известно на сегодняшний день?</h2>
+                <p class="tm-color-gray animate__animated animate__fadeIn smooth-text">
+                  6G — это шестое поколение мобильной связи, которое обещает революционные изменения в области телекоммуникаций. Внедрение 6G ожидается в 2028—2030 годах и будет основано на новых стандартах, следующих за 5G/IMT-2020.
+                </p>
+                <p class="tm-color-gray animate__animated animate__fadeIn smooth-text">
+                  Основные характеристики 6G включают:
+                </p>
+                <ul class="tm-color-gray animate__animated animate__fadeIn smooth-text">
+                  <li>Скорость передачи данных до 1 терабита в секунду.</li>
+                  <li>Использование терагерцового спектра для расширения зоны покрытия.</li>
+                  <li>Повышенная энергоэффективность по сравнению с предыдущими поколениями.</li>
+                  <li>Низкая задержка и высокая надежность связи.</li>
+                </ul>
+                <p class="tm-color-gray animate__animated animate__fadeIn smooth-text">
+                  Перспективные возможности 6G включают:
+                </p>
+                <ul class="tm-color-gray animate__animated animate__fadeIn smooth-text">
+                  <li>Применение в телемедицине для дистанционных операций и оптимизации рабочих процессов.</li>
+                  <li>Эффективное соединение при движении на высоких скоростях (до 1000 км/ч).</li>
+                  <li>Развитие умных городов и интернета вещей.</li>
+                  <li>Улучшение виртуальной и дополненной реальности (VR и AR).</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      `
+    });
+
+    Vue.component('about-section', {
+      template: `
+        <div class="tm-section-wrap bg-white">
+          <section id="about" class="row tm-section animate__animated animate__fadeInUp">
+            <div class="col-xl-6">
+              <div class="tm-section-half">
+                <div><i class="fas fa-6x fa-rss mb-5 tm-section-icon animate__animated animate__bounceIn glow"></i></div>
+                <h2 class="tm-section-title tm-color-primary mb-5 animate__animated animate__bounceIn neon-text smooth-text">О технологии 6G</h2>
+                <p class="mb-5 animate__animated animate__fadeIn smooth-text">
+                  6G — это технология мобильной связи нового, шестого поколения, находящаяся в процессе активной разработки. Предполагается, что сети 6G обеспечат скорости передачи данных, превышающие показатели 5G в сотни раз, достигая потенциала в один терабит в секунду.
+                </p>
+                <p class="animate__animated animate__fadeIn smooth-text">
+                  Ключевой особенностью 6G будет использование терагерцового спектра, что значительно расширит зоны покрытия, включая подводные пространства, высотные объекты и космические зоны.
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="tm-section-half">
+                <div><i class="fa-6x fa fa-history mb-5 tm-section-icon animate__animated animate__bounceIn glow"></i></div>
+                <h2 class="tm-section-title tm-color-primary mb-5 animate__animated animate__bounceIn neon-text smooth-text">Основные характеристики и возможности</h2>
+                <p class="mb-5 animate__animated animate__fadeIn smooth-text">
+                  Характеристики:
+                  <ul>
+                    <li>Максимальная скорость передачи данных: до 1 терабита в секунду.</li>
+                    <li>Использование терагерцового спектра для расширения зоны покрытия.</li>
+                    <li>Повышенная энергоэффективность по сравнению с предыдущими поколениями.</li>
+                  </ul>
+                </p>
+                <p class="animate__animated animate__fadeIn smooth-text">
+                  Перспективные возможности 6G:
+                  <ul>
+                    <li>Высочайшая пропускная способность для сверхбыстрой передачи данных.</li>
+                    <li>Применение в телемедицине, например, для дистанционных операций и оптимизации рабочих процессов.</li>
+                    <li>Эффективное соединение при движении на высоких скоростях (до 1000 км/ч).</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      `
+    });
+
+    Vue.component('technologies-section', {
+      template: `
+        <div class="tm-section-wrap bg-white">
+          <section id="work" class="row tm-section animate__animated animate__fadeInUp">
+            <div class="col-12">
+              <div class="w-100 tm-double-border-1 tm-border-gray">
+                <div class="tm-double-border-2 tm-border-gray tm-box-pad">
+                  <div class="tm-gallery-wrap">
+                    <h2 class="tm-color-primary tm-section-title mb-4 ml-2 animate__animated animate__bounceIn neon-text smooth-text">Технологии</h2>
+                    <div class="tm-gallery">
+                      <div class="tm-gallery-item animate__animated animate__fadeInUp">
+                        <figure class="effect-bubba">
+                          <img src="img/gallery/01.png" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>AI <span></span></h2>
+                            <p>Ускорит и оптимизирует обработку информации.</p>
+                            <a href="img/gallery/large/01.png">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item animate__animated animate__fadeInUp">
+                        <figure class="effect-bubba">
+                          <img src="img/gallery/02.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>AR<span></span></h2>
+                            <p>6G обеспечит высокую скорость и практически мгновенную реакцию.</p>
+                            <a href="img/gallery/large/02.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item animate__animated animate__fadeInUp">
+                        <figure class="effect-bubba">
+                          <img src="img/gallery/03.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>VR <span></span></h2>
+                            <p>Создание VR-приложений, требующих высокой скорости передачи.</p>
+                            <a href="img/gallery/large/03.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item animate__animated animate__fadeInUp">
+                        <figure class="effect-bubba">
+                          <img src="img/gallery/04.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Новые антенны <span></span></h2>
+                            <p>Антенна с фотопроводящей линзой.</p>
+                            <a href="img/gallery/large/04.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      `
+    });
+
+    Vue.component('video-section', {
+      template: `
+        <div class="tm-section-wrap bg-white">
+          <section id="vid" class="row tm-section animate__animated animate__fadeInUp">
+            <div class="col-12 tm-section-pad">
+              <div class="tm-flex-item-left">
+                <div class="tm-w-80">
+                  <h2 class="tm-color-primary tm-section-title mb-4 animate__animated animate__bounceIn neon-text smooth-text">Видео 6G</h2>
+                  <div class="video-container">
+                    <iframe width="850" height="450" src="https://www.youtube.com/embed/kpWk3X7YYj8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      `
+    });
+
+    Vue.component('about-us-section', {
+      template: `
+        <div class="tm-section-wrap bg-white">
+          <section id="clients" class="row tm-section animate__animated animate__fadeInUp">
+            <div class="col-12 tm-section-pad">
+              <div class="tm-flex-item-left">
+                <div class="tm-w-80">
+                  <h2 class="tm-color-primary tm-section-title mb-4 animate__animated animate__bounceIn neon-text smooth-text">О нас</h2>
+                  <p class="mb-5 animate__animated animate__fadeIn smooth-text">
+                    Разработали и создали сайт студенты группы 2бИТС2. С помощью этого сайта мы хотели бы кратко описать тему технологии 6G, какими характеристиками и перспективными возможностями она обладает, а также с помощью каких и в каких технологиях она применяется. Наша команда: Кодиров М.Б., Каримов Д.Н, Тарасов М.К, Элмуродов Б.Ю.
+                  </p>
+                </div>
+                <div>
+                  <div class="row tm-clients-images">
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap animate__animated animate__fadeInUp">
+                      <a href="https://vk.com/k0d1r0v_m">
+                        <img src="img/11.jpg" alt="Client Image" class="img-fluid tm-client-img" />
+                      </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap animate__animated animate__fadeInUp">
+                      <a>
+                        <img src="img/22.jpg" alt="Client Image" class="img-fluid tm-client-img" />
+                      </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap animate__animated animate__fadeInUp">
+                      <a href="https://vk.com/elmurodov_19">
+                        <img src="img/33.jpg" alt="Client Image" class="img-fluid tm-client-img" />
+                      </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap animate__animated animate__fadeInUp">
+                      <a href="https://vk.com/privkrchcto">
+                        <img src="img/44.jpg" alt="Client Image" class="img-fluid tm-client-img" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      `
+    });
+
+    new Vue({
+      el: '#app',
+      data: {
+        particlesVisible: true
+      },
+      mounted() {
+        window.addEventListener('scroll', this.handleScroll);
+      },
+      beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll);
+      },
+      methods: `
+        handleScroll() {
+          const introSection = document.getElementById('intro');
+          if (introSection) {
+            const rect = introSection.getBoundingClientRect();
+            this.particlesVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+          }
+        }
+      `
+    });
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.singlePageNav.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/templatemo-scripts.js"></script>
+</body>
+</html>
